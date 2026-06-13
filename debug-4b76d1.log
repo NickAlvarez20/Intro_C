@@ -1,0 +1,3 @@
+{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"program started","hypothesisId":"A","data":{"c":-1},"timestamp":0}
+{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"first getchar returned","hypothesisId":"B","data":{"c":104},"timestamp":0}
+{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"program exiting","hypothesisId":"C","data":{"c":-1},"timestamp":0}

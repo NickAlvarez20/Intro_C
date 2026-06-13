@@ -1,3 +1,10 @@
-{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"program started","hypothesisId":"A","data":{"c":-1},"timestamp":0}
-{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"first getchar returned","hypothesisId":"B","data":{"c":104},"timestamp":0}
-{"sessionId":"4b76d1","location":"copy_input_to_output.c:main","message":"program exiting","hypothesisId":"C","data":{"c":-1},"timestamp":0}
+{"data":{"amount":500,"balance":1000},"hypothesisId":"C","location":"bank.go:addFunds","message":"entry","sessionId":"4b76d1","timestamp":1781386883585}
+{"data":{"balance":1500},"hypothesisId":"C","location":"bank.go:addFunds","message":"success","sessionId":"4b76d1","timestamp":1781386883586}
+{"data":{"amount":200,"balance":1500},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"entry","sessionId":"4b76d1","timestamp":1781386883586}
+{"data":{"balance":1300},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"success","sessionId":"4b76d1","timestamp":1781386883586}
+{"data":{"amount":200,"balance":1300},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"entry","sessionId":"4b76d1","timestamp":1781386883587}
+{"data":{"balance":1100},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"success","sessionId":"4b76d1","timestamp":1781386883587}
+{"data":{"amount":500,"balance":1100},"hypothesisId":"C","location":"bank.go:addFunds","message":"entry","sessionId":"4b76d1","timestamp":1781386883587}
+{"data":{"balance":1600},"hypothesisId":"C","location":"bank.go:addFunds","message":"success","sessionId":"4b76d1","timestamp":1781386883588}
+{"data":{"amount":9999,"balance":1600},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"entry","sessionId":"4b76d1","timestamp":1781386883588}
+{"data":{"amount":9999,"balance":1600},"hypothesisId":"C","location":"bank.go:subtractFunds","message":"rejected withdraw validation","sessionId":"4b76d1","timestamp":1781386883588}

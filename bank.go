@@ -1,0 +1,86 @@
+package main
+
+import "fmt"
+
+type BankAccount struct {
+	balance float64
+}
+
+func (b *BankAccount) Deposit(amount float64) bool {
+	return b.addFunds(amount)
+}
+
+func (b *BankAccount) Withdraw(amount float64) bool {
+	return b.subtractFunds(amount)
+}
+
+func (b *BankAccount) GetBalance() float64 {
+	return b.balance
+}
+
+func (b *BankAccount) validateWithdraw(amount float64) bool {
+	if amount <= 0 {
+		return false
+	}
+	if amount > b.balance {
+		return false
+	}
+	return true
+}
+
+func (b *BankAccount) validateDeposit(amount float64) bool {
+	if amount <= 0 {
+		return false
+	}
+	return true
+}
+
+func (b *BankAccount) addFunds(amount float64) bool {
+	if !b.validateDeposit(amount) {
+		return false
+	}
+	b.balance += amount
+	return true
+}
+
+func (b *BankAccount) subtractFunds(amount float64) bool {
+	if !b.validateWithdraw(amount) {
+		return false
+	}
+	b.balance -= amount
+	return true
+}
+
+func main() {
+	account := BankAccount{balance: 1000.00}
+	amount := 0.00
+
+	if account.Deposit(500.00) {
+		amount = 500.00
+		fmt.Printf("Amount deposited: %.2f\n", amount)
+		fmt.Printf("Balance after deposit: %.2f\n", account.GetBalance())
+	}
+
+	if account.Withdraw(200.00) {
+		amount = 200.00
+		fmt.Printf("Amount withdrawn: %.2f\n", amount)
+		fmt.Printf("Balance after withdraw: %.2f\n", account.GetBalance())
+	}
+
+	if account.subtractFunds(200.00) {
+		amount = 200.00
+		fmt.Printf("Amount subtracted: %.2f\n", amount)
+		fmt.Printf("Balance after subtractFunds: %.2f\n", account.GetBalance())
+	}
+
+	if account.addFunds(500.00) {
+		amount = 500.00
+		fmt.Printf("Amount added: %.2f\n", amount)
+		fmt.Printf("Balance after addFunds: %.2f\n", account.GetBalance())
+	}
+
+	if !account.Withdraw(9999.00) {
+		fmt.Println("Rejected overdraft withdraw (expected)")
+	}
+	fmt.Printf("Final balance: %.2f\n", account.GetBalance())
+}

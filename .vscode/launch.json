@@ -1,7 +1,8 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "C/C++: cl.exe build and debug active file",
+            "name": "VS Code: cl.exe build and debug",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -11,7 +12,14 @@
             "environment": [],
             "console": "integratedTerminal",
             "preLaunchTask": "C/C++: cl.exe build active file"
+        },
+        {
+            "name": "Cursor: cl.exe build and run",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "cwd": "${fileDirname}",
+            "preLaunchTask": "C/C++: cl.exe build active file"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

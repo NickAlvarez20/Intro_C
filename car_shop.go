@@ -1,3 +1,7 @@
+// OOP reference — revisit after Go backend Step 10 for a CarShop API
+// using the same Fiber/GORM pattern in go/.
+// Run: go run car_shop.go
+
 package main
 
 import "fmt"

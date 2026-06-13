@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "Henloworld Bank API",
+    "description": "LEARNING STEP 7: Import this into Postman and fill in requests.\n\nTasks:\n1. Set collection variable baseUrl = http://localhost:8080\n2. Add requests for POST /accounts, GET /accounts/:id/balance, POST deposit, POST withdraw\n3. After Step 8: add POST /auth/login and set Bearer token on account requests\n4. Optional: chain create -> deposit -> balance using saved id variable",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "accountId",
+      "value": "1"
+    }
+  ],
+  "item": []
+}

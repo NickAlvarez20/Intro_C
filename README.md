@@ -1,8 +1,29 @@
 # henloworld
 
-Small C programs while working through *The C Programming Language* (K&R), plus a Docker setup for running one program in a container.
+Small C programs while working through *The C Programming Language* (K&R), a Go backend learning path, and Docker setups.
 
-## Programs
+## Go learning path
+
+Bank account OOP code grows into a full REST API in [`go/`](go/). Follow step-by-step tasks in **[LEARNING.md](LEARNING.md)** — search the repo for `LEARNING STEP` comments.
+
+| File | Description |
+|------|-------------|
+| `go/cmd/cli` | Bank account demo (Step 1) |
+| `go/cmd/api` | Fiber REST API (Steps 6–8) |
+| `go/internal/account` | Domain model + interfaces |
+| `bank.go` | Redirect — run `cd go && go run ./cmd/cli` |
+| `car_shop.go` | Standalone OOP reference |
+
+```powershell
+cd go
+go run ./cmd/cli          # Step 1 demo
+go test ./...             # after Step 2+
+go run ./cmd/api          # after Step 6
+```
+
+Stack: **Fiber**, **GORM + SQLite**, **JWT**, **Docker**, **Postman**.
+
+## Programs (C)
 
 | File | Description |
 |------|-------------|
@@ -51,6 +72,15 @@ docker run -i --rm copy-input-to-output
 ```
 
 Use `-i` so the program can read from stdin via `getchar()`.
+
+## Docker (Go API)
+
+After completing Step 9 in [LEARNING.md](LEARNING.md):
+
+```bash
+docker build -f go/docker/Dockerfile -t henloworld-bank go
+docker run -p 8080:8080 henloworld-bank
+```
 
 ## Editor setup
 

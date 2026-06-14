@@ -3,14 +3,14 @@
 /* count characters in input; 1st version */
 
 int main(void){
-  long nc;
+  double nc;
 
-  nc = 0;
-  while (getchar() != EOF)
-    ++nc;
-  printf("%ld\n", nc);
+  for (nc = 0; getchar() != EOF; ++nc);
+
+  printf("%.0f\n", nc);
   return 0;
 }
+
 
 /* create a program that creates an array, allocates memory for it, and fills it with the numbers 1 to 100, and then frees the memory*/
 

@@ -1,13 +1,31 @@
 #include <stdio.h>
 
-#define LOWER 0 /* lower limit of temp table*/
-#define UPPER 300 /* upper limit of temp table */
-#define STEP 20 /* step size */
+/* count characters in input; 1st version */
 
-main() {
-  int fahr;
-  for (fahr = UPPER; fahr >= LOWER; fahr = fahr - STEP) {
-    printf("%3d %6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32));
-  }
+int main(void){
+  long nc;
+
+  nc = 0;
+  while (getchar() != EOF)
+    ++nc;
+  printf("%ld\n", nc);
   return 0;
 }
+
+/* create a program that creates an array, allocates memory for it, and fills it with the numbers 1 to 100, and then frees the memory*/
+
+// int main(void){
+//   int *array = malloc(100 * sizeof(int));
+//   if (array == NULL){
+//     printf("Error: Failed to allocate memory\n");
+//     return 1;
+//   }
+//   for (int i = 0; i < 100; i++){
+//     array[i] = i + 1;
+//   }
+    
+  /* use the array here if you want, e.g. printf("%d\n", array[0]); */
+
+//   free(array);
+//   return 0;
+// }

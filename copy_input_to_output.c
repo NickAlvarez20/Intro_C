@@ -12,10 +12,10 @@
  */
 
 int main(void) {
-    int c;
+  int c;
 
-    while (printf("%d ", (c = getchar()) != EOF), c != EOF)
-        putchar(c);
-    putchar('\n');
-    return 0; 
+  while (printf("%d ", (c = getchar()) != EOF), c != EOF)
+    putchar(c);
+  putchar('\n');
+  return 0;
 }
